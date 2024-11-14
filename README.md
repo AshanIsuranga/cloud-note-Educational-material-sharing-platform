@@ -84,7 +84,7 @@ Your Name
 ## 🚧 Future Improvements
 
 - [ ] Implenet more secure authentication features
-- [ ]support multiple formats of resources
+- [ ] Support multiple formats of resources
 - [ ] Develop mobile application
 - [ ] Add social media authentication
 - [ ] Add document rating system and feed back system
