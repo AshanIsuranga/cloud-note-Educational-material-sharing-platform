@@ -1,0 +1,21 @@
+<div class="login-container">
+  <h2>Login</h2>
+  <form (ngSubmit)="onLogin()" #loginForm="ngForm" class="login-form">
+    <div class="form-group">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" [(ngModel)]="username" required class="form-input">
+    </div>
+    <!--[(ngModel)]="username"  binds the data form data with the username variable in the .ts file-->
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" [(ngModel)]="password" required class="form-input">
+    </div>
+    <button type="submit" [disabled]="!loginForm.form.valid" class="btn btn-primary">Login</button>
+  </form>
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}<!--bind the error massage from .ts file-->
+  </div>
+  <!--*ngIf="errorMessage"  display the error massage from .ts file if needed-->
+
+  <p class="signup-prompt">Don't have an account? <a routerLink="/signup" class="signup-link">Sign up here</a></p>
+</div>

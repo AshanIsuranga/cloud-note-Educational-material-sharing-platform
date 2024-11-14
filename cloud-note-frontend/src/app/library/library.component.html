@@ -1,0 +1,63 @@
+<div class="library-container">
+  <h2>Library</h2>
+  
+  <div class="filter-container">
+    <h3>Filters</h3>
+    <div class="filter-row">
+      <div class="filter-item">
+        <label for="category">Category:</label>
+        <select id="category" [(ngModel)]="selectedCategory">
+          <option value="">All Categories</option>
+          <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+        </select>
+      </div>
+      <div class="filter-item">
+        <label for="type">Type:</label>
+        <select id="type" [(ngModel)]="selectedType">
+          <option value="">All Types</option>
+          <option *ngFor="let type of types" [value]="type">{{ type }}</option>
+        </select>
+      </div>
+    </div>
+    <div class="filter-actions" style=" background-color: AAA585; opacity: 0.95;">
+      <button (click)="onFilter()" class="btn btn-primary">Apply Filters</button>
+      <button (click)="clearSearch()" class="btn btn-secondary">Clear Search</button>
+    </div>
+  </div>
+
+  <div class="search-container">
+    <input type="text" [(ngModel)]="searchTerm" placeholder="Search PDFs..." (keyup.enter)="onSearch()" class="search-input">
+    <button (click)="onSearch()" class="btn btn-primary">Search</button>
+  </div>
+
+  <div *ngIf="isLoading" class="loading">
+    <div class="spinner"></div>
+    <p>Loading PDFs...</p>
+  </div>
+
+  <div *ngIf="!isLoading">
+    <div *ngIf="pdfs.length === 0" class="no-results">
+      No PDFs found matching your search.
+    </div>
+    <div *ngIf="pdfs.length > 0" class="results-info">
+      <p>Showing {{ pdfs.length }} of {{ totalElements }} results</p>
+      <button (click)="toggleShowAllResults()" class="btn btn-link">
+        {{ showAllResults ? 'Show Paginated Results' : 'Show All Results' }}
+      </button>
+    </div>
+    <ul *ngIf="pdfs.length > 0" class="pdf-list">
+      <li *ngFor="let pdf of pdfs" class="pdf-item">
+        <div class="pdf-info">
+          <span class="pdf-name">{{ pdf.name }}</span>
+          
+        </div>
+        <button (click)="downloadPdf(pdf.id, pdf.name)" class="btn btn-download">Download</button>
+      </li>
+    </ul>
+    <div *ngIf="!showAllResults" class="pagination">
+      <button (click)="prevPage()" [disabled]="currentPage === 0" class="btn btn-secondary">Previous</button>
+      <span>Page {{ currentPage + 1 }} of {{ totalPages }}</span>
+      <button (click)="nextPage()" [disabled]="currentPage === totalPages - 1" class="btn btn-secondary">Next</button>
+    </div>
+  </div>
+</div>

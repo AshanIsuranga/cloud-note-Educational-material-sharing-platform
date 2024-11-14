@@ -1,0 +1,38 @@
+.app-background {
+    background-image: url('/n.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Ensures the background covers at least the full height of the viewport */
+    margin: 0;
+}
+
+h1 {
+    font-size: 3rem; /* Increase font size for the title */
+    color: #573E16;
+    margin-bottom: 20px; /* Add space below the title */
+    text-shadow: 2px 2px 4px 573E16; /* Add a shadow for better visibility */
+    text-align: center;
+    font-weight: bold;
+}
+
+nav {
+    margin-bottom: 20px; /* Space below the navigation */
+    text-align: center;
+    font-weight: bold;
+}
+
+nav a {
+    color: #573E16; /* Set link color */
+    text-decoration: none; /* Remove underline from links */
+    padding: 10px 15px; /* Add padding for clickable area */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Light background on hover */
+    border-radius: 5px; /* Rounded corners for the hover effect */
+}
+
+

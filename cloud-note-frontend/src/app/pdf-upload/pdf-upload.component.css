@@ -1,0 +1,85 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  background-image:"/n.png";
+  background-size: cover;
+  margin: 0;
+  padding: 20px;
+}
+
+.upload-form {
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  background-color: #BAA876;
+  opacity: 0.85;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  color: #343a40;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.file-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+.file-info {
+  margin-top: 5px;
+  font-weight: bold;
+  color: #495057;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-select {
+  background-color: BA4108;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+.btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.btn-primary {
+  background-color: #875319;
+  color: white;
+  font-weight: bold;
+}
+
+.btn-primary:disabled {
+  background-color: #cfd8dc;
+  cursor: not-allowed;
+}
+
+.progress-container {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.status-message {
+  margin-top: 10px;
+  text-align: center;
+  color: #28a745;
+}
