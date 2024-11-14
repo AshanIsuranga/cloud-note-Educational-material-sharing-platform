@@ -1,41 +1,90 @@
-Educational Material Sharing App
-Overview
+# TechGear Hub - Computer Accessories Shop
+
 This app allows users to upload, view, search, and download educational PDFs. It uses Spring Boot for the backend, Angular for the frontend, and PostgreSQL for the database.
-Key Features
 
-PDF Upload
-Paginated PDF Display
-Search and Filtering by Title, Author, Subject, Tags
-PDF Download
+## 🌟 Features
 
-Tech Stack
+- upload Documents in PDF format
+- display documents in a paginated way to efficiently save memory use 
+  limiting the amount of documents load in to the page
+- povide ease for the user to browse providing full text search and filter 
+  functionality to use multiple combinations for queries
+- Download PDFs
 
-Backend: Spring Boot
-Frontend: Angular
-Database: PostgreSQL
+## 🚀 Technologies Used
 
-Installation
+### Frontend
+- HTML5
+- CSS3
+- Angular
 
-Clone the repo: git clone https://github.com/your-username/educational-material-app.git
-Set up the database:
+### Backend
+- Spring boot
+- PostgreSQL
+- Hibernate
 
-Install PostgreSQL and create a new DB
-Update the connection details in application.properties
+## 📦 Installation
+
+1. Clone the repository
+```bash
+https://github.com/AshanIsuranga/cloud-note-Educational-material-sharing-platform.git
+```
+2.install postgresql local database to your computer
+
+3. move to backend
+```bash
+cd cloud-note-backend
+cd cloude_note
+cd src
+cd main
+cd resources
+find application.properties file
+```
+
+4. Set up environment variables
+add your credentials to these:
+```
+spring.datasource.url=jdbc:postgresql://your local port/your database name
+spring.datasource.username=your postgresql database username
+spring.datasource.password=your postgresql database password
+```
+
+5. Start the application
+run the postgrsql database locally:
+
+run the backednd:
+```bash
+cd cloud-note-backend
+cd cloud_note
+mvn spring-boot:run
+```
+run the frontend:
+```bash
+cd cloud-note-frontend
+npm install
+ng serve
+```
+The frontend application will be running at `http://localhost:4300`
+The backend application will be running at `http://localhost:8080`
+
+## 💻 Usage
+
+### Customer Features
+- search and filter documents combining different parameters
+- upload documents
+- download pdfs
+
+## 👨‍💻 Author
+
+Your Name
+- GitHub: @AshanIsuranga(https://github.com/AshanIsuranga)
+- LinkedIn: Ashan Isuranga(https://linkedin.com/in//ashan-isuranga-9a6a2b246/)
 
 
-Build and run the backend: ./gradlew bootRun
-Install frontend deps: cd frontend && npm install
-Start the frontend: ng serve
-Open the app at http://localhost:4200
+## 🚧 Future Improvements
 
-API Docs
-The backend APIs are documented using Swagger. Access the docs at http://localhost:8080/swagger-ui.html.
-Deployment
-Use Docker to containerize the backend and frontend, then deploy the images.
-Contributing
-
-Fork the repo
-Create a new branch for your changes
-Make your contributions and commit
-Push your branch to your forked repo
-Open a pull request
+- [ ] Implenet more secure authentication features
+- [ ]support multiple formats of resources
+- [ ] Develop mobile application
+- [ ] Add social media authentication
+- [ ] Add document rating system and feed back system
